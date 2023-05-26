@@ -1,0 +1,9 @@
+User: The User model represents the registered users of your gym website. It would typically include attributes such as name, email, password, and any additional user-specific information.
+
+Membership: The Membership model represents the various membership plans offered by your gym. It would include attributes like name, price, duration, benefits, and any other relevant details.
+
+Class: The Class model represents the different fitness classes available at your gym, such as yoga, cardio, weightlifting, etc. It would include attributes like class name, description, schedule, duration, capacity, and other related information.
+
+Trainer: The Trainer model represents the fitness trainers or instructors associated with your gym. It would include attributes such as name, bio, qualifications, specializations, and possibly contact information.
+
+Booking: The Booking model represents the bookings made by users for classes or appointments. It would include attributes like user ID, class ID, date/time, status, and any other relevant information.

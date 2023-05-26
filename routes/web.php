@@ -14,7 +14,7 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('splash');
 });
 //route for getting home page
 Route::get('/home',[AuthController::class,'landingPage'])->middleware('isLoggedIn');
