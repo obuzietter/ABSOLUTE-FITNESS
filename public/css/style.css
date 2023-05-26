@@ -1,3 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(
+            to right,
+            rgba(255, 153, 0, 0.6),
+            rgba(11, 0, 0, 0.8)
+        ),
+        url(/images/main.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -6,41 +24,49 @@
 }
 
 form {
+    width: 30%;
     background-color: #f5f5f5;
     padding: 20px;
-    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    place-items: center;
+    animation: transitionIn 1s;
 }
 
 h2 {
-    text-align: center;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
+    width: 75%;
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    margin-top: 10px;
+
     border: 1px solid #ccc;
 }
 
 button {
-    background-color: #333;
+    width: min-content;
+    background-color: #ff9900;
+    font-size: 1rem;
+    font-weight: 900;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
     text-decoration: none;
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #f5f5f5;
+    color: #ff9900;
+    transform: scaleX(1.2);
+    border: #ff9900 1px solid;
 }
 
 p {
@@ -51,10 +77,23 @@ p {
 a {
     color: blue;
     text-decoration: none;
+    border-bottom: 1px solid blue;
 }
-.error-message{
+.error-message {
     color: red;
 }
-.success{
-    color: red;
+.success {
+    color: green;
+}
+
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }

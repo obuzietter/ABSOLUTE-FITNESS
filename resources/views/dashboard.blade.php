@@ -8,19 +8,21 @@
     </thead>
     <tbody>
         <tr>
-            <td> {{$data->name}} </td>
-            <td> {{$data->email}} </td>
+            <td> {{ $data->name }} </td>
+            <td> {{ $data->email }} </td>
             <td> <a href="/logout"> Logout </a> </td>
         </tr>
     </tbody>
 </table> -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Gym Website</title>
-   <link rel="stylesheet" href="{{url('/css/home.css')}}">
+    <link rel="stylesheet" href="{{ url('/css/dashboard.css') }}">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -28,7 +30,7 @@
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Classes</a></li>
-                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Trainor</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -41,35 +43,48 @@
             <a href="#" class="btn">Join Now</a>
         </div>
     </section>
-
     <section id="classes-section">
-        <h2>Our Classes</h2>
-        <div class="class-card">
-            <img src="gym_class1.jpg" alt="Class 1">
-            <h3>Class 1</h3>
-            <p>Description of Class 1</p>
-            <a href="#" class="btn">Learn More</a>
+        <h2>Trainers</h2>
+        <hr>
+        <div class="cards">
+            <div class="class-card">
+                <h3 class="card-d">Sienna Stone</h3>
+
+            </div>
+            <div class="cards">
+                <div class="class-card">
+                    <h3 class="card-d">Sienna Stone</h3>
+
+                </div>
+                <div class="cards">
+                    <div class="class-card">
+                        <h3 class="card-d">Sienna Stone</h3>
+
+                    </div>
+
+
+                </div>
+    </section>
+
+    <section class="membership">
+        <h2>Get Your Membership</h2>
+        <hr>
+        <div class="packages">
+        <div class="package">
+            <img src="/images/rope.jpg" alt="Gym Image 1">
+            <span>
+                <h3>Platinum</h3>
+                <p>Our Platinum Membership Package offers the ultimate gym experience for fitness enthusiasts. Enjoy unlimited access to our state-of-the-art facilities, including the latest fitness equipment, group classes, and premium amenities. Benefit from personalized training sessions with our expert trainers, access to exclusive workshops and events, and priority scheduling for classes. This all-inclusive package is designed to elevate your fitness journey to the next level.</p>
+            </span>
         </div>
-        <div class="class-card">
-            <img src="gym_class2.jpg" alt="Class 2">
-            <h3>Class 2</h3>
-            <p>Description of Class 2</p>
-            <a href="#" class="btn">Learn More</a>
+        <div class="package">
+            <img src="/images/rope.jpg" alt="Gym Image 1">
+        </div>
         </div>
     </section>
 
-    <section id="gallery-section">
-        <h2>Photo Gallery</h2>
-        <div class="image-card">
-            <img src="gym_image1.jpg" alt="Gym Image 1">
-        </div>
-        <div class="image-card">
-            <img src="gym_image2.jpg" alt="Gym Image 2">
-        </div>
-        <div class="image-card">
-            <img src="gym_image3.jpg" alt="Gym Image 3">
-        </div>
-    </section>
+    
+
 
     <section id="contact-section">
         <h2>Contact Us</h2>
@@ -91,4 +106,5 @@
         <p>&copy; 2023 Absolute Fitness Gym . All rights reserved.</p>
     </footer>
 </body>
+
 </html>

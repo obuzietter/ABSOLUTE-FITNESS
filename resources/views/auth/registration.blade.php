@@ -5,7 +5,7 @@
     <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
-<body>
+<body>      
     <div class="container">
         <form class="registration-form" action="{{route('register-user')}}" method="POST">
             @csrf

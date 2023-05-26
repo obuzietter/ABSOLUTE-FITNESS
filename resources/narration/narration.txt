@@ -7,3 +7,30 @@ Class: The Class model represents the different fitness classes available at you
 Trainer: The Trainer model represents the fitness trainers or instructors associated with your gym. It would include attributes such as name, bio, qualifications, specializations, and possibly contact information.
 
 Booking: The Booking model represents the bookings made by users for classes or appointments. It would include attributes like user ID, class ID, date/time, status, and any other relevant information.
+
+## Gym Trainer cap
+"Unleash Your Potential with Our Expert Gym Trainers"
+"Reach New Heights of Fitness with Our Dedicated Trainers"
+"Experience Personalized Guidance from Our Gym Experts"
+"Transform Your Body with the Support of Our Skilled Trainers"
+"Train with Confidence under the Guidance of Our Fitness Professionals"
+"Achieve Your Fitness Goals with the Help of Our Experienced Trainers"
+"Elevate Your Workout with the Expertise of Our Gym Coaches"
+"Unleash Your Strength with the Mentorship of Our Fitness Trainers"
+"Get Inspired and Stay Motivated with Our Passionate Gym Trainers"
+"Discover Your Full Potential with the Guidance of Our Expert Coaches"
+
+Platinum Membership Package:
+Our Platinum Membership Package offers the ultimate gym experience for fitness enthusiasts. Enjoy unlimited access to our state-of-the-art facilities, including the latest fitness equipment, group classes, and premium amenities. Benefit from personalized training sessions with our expert trainers, access to exclusive workshops and events, and priority scheduling for classes. This all-inclusive package is designed to elevate your fitness journey to the next level.
+
+Gold Membership Package:
+Our Gold Membership Package provides a comprehensive fitness solution tailored to your needs. Enjoy unlimited access to our gym facilities, a wide range of group classes, and access to basic amenities. Benefit from regular check-ins with our trainers, personalized workout plans, and discounts on select services. This package offers a balanced approach to fitness and is perfect for individuals seeking a well-rounded gym experience.
+
+Silver Membership Package:
+Our Silver Membership Package is designed for those looking for a solid foundation in fitness. Enjoy access to our gym facilities during off-peak hours, a selection of group classes, and standard amenities. Benefit from introductory training sessions with our trainers to kickstart your fitness journey and receive ongoing support and guidance. This package provides an affordable option for individuals committed to their fitness goals.
+
+Student Membership Package:
+Our Student Membership Package is exclusively crafted for students who prioritize their health and well-being. Enjoy flexible gym access during designated hours, discounted rates on membership fees, and a variety of group classes tailored to student schedules. Benefit from nutritional guidance, fitness tips, and a supportive community that understands the unique challenges faced by students.
+
+Corporate Membership Package:
+Our Corporate Membership Package is designed to promote employee wellness and productivity. Provide your employees with access to our gym facilities, group classes, and wellness programs. This package includes corporate discounts, customized fitness challenges, and exclusive workshops aimed at fostering a healthy work-life balance. Invest in your team's well-being and watch them thrive both personally and professionally.

@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('splash');
 });
 //route for getting home page
-Route::get('/home',[AuthController::class,'landingPage'])->middleware('isLoggedIn');
+Route::get('/dashboard',[AuthController::class,'dashboard'])->middleware('isLoggedIn');
 
 
 //routes for getting login and registration pages

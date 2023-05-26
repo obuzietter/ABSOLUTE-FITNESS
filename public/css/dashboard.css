@@ -1,0 +1,236 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.navbar ul li a.active {
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero-section {
+    background-image: url(/images/main2.jpg);
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+}
+
+.hero-content p {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content span {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: #ff9900;
+    padding: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff9900;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00cb00;
+}
+
+/* Trainer Section */
+#classes-section {
+    background-color: #f2f2f2;
+    position: relative;
+    height: 400px;
+}
+
+#classes-section .cards {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+#classes-section .class-card {
+    background: linear-gradient(
+            to right,
+            rgba(255, 153, 0, 0.6),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url(/images/trainer.jpg);
+        
+       
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    width: 250px;
+    min-width: 150px;
+    height: 250px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    transition: 0.6s ease-in;
+    animation: cardAnimation 2s;
+    
+}
+
+.class-card:hover {
+    
+    transform: scale(1.1);
+    rotate: 25deg;
+    scale: 1.1;
+    
+}
+
+.class-card .card-d {
+    transition: 0.6s ease-in;
+    scale: 0;
+    z-index: -10;
+
+    text-decoration: underline;
+}
+
+.class-card:hover .card-d {
+    scale: 1;
+    z-index: 1;
+    
+    background: scale(1.5);
+    rotate: -25deg;
+}
+
+/* Membership Section */
+.membership .packages{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.membership .packages .package{
+    position: relative;
+    width: 400px;
+    border: 2px solid black;
+        
+}
+.membership .packages .package span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.membership .packages .package span h3{
+    padding: 5px;
+    color: #ff9900;    
+}
+.membership .packages .package span p{
+    border-left: 2px solid white;
+    padding: 5px;
+    
+}
+    .membership .packages .package img{
+        width: 400px;
+        
+    }
+/* Contact Section */
+#contact-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+@keyframes cardAnimation {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

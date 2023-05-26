@@ -50,7 +50,7 @@ class AuthController extends Controller
         if($user){
             if(Hash::check($request->password, $user->password)){
                 $request->session()->put('sessionID', $user->user_id);
-                return redirect('/home');
+                return redirect('/dashboard');
             }else {
                 return back()-> with('fail', 'Invalid Password');
             }
@@ -61,14 +61,14 @@ class AuthController extends Controller
 
     }
 
-    public function landingPage(){
+    public function dashboard(){
         $data = array();
 
         if(Session::has('sessionID')){
             $data = User::where('user_id', '=', Session::get('sessionID'))->first();
 
         }
-        return view('home', compact('data'));
+        return view('dashboard', compact('data'));
     }
 
     public function logOut(){

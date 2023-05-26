@@ -14,9 +14,13 @@
         <header class="header">
             <div class="header-logo">
                 </div>
+                <div class="logo">
+                  <strong>FIT</strong>
+                  <strong>ZONE</strong>
+                </div>
             <div class="header-nav">
-                <button>Login</button>
-                <button>Signup</button>
+                <button><a href="{{'/login'}}">Login</a></button>
+                <button><a href="{{'/register'}}">Signup</a></button>
             </div>
         </header>
         <main class="main">
