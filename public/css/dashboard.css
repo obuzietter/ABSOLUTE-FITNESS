@@ -1,3 +1,6 @@
+/* *{
+    border: 2px solid red;
+} */
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
@@ -9,33 +12,6 @@ body {
 }
 
 /* Header */
-header {
-    background-color: #333;
-    padding: 10px;
-    color: #fff;
-    
-}
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-.navbar ul li a.active {
-    font-weight: bold;
-}
 
 /* Hero Section */
 #hero-section {

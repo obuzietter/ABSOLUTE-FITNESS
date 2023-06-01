@@ -18,13 +18,20 @@
             <div class="success">{{Session::get('fail')}}</div>
             @endif
             
-            <input type="text" name="fullname" placeholder="Full Name" value="{{old('fullname')}}">
-            <span class="error-message">@error('fullname') {{$message}} @enderror</span>
+            <input type="text" name="firstName" placeholder="First Name" value="{{old('firstName')}}">
+            <span class="error-message">@error('firstName') {{$message}} @enderror</span>
+
+            <input type="text" name="lastName" placeholder="Last Name" value="{{old('lastName')}}">
+            <span class="error-message">@error('lastName') {{$message}} @enderror</span>
+
             <input type="email" name="email" placeholder="Email" value="{{old('email')}}">
             <span class="error-message">@error('email') {{$message}} @enderror</span>
+
             <input type="password" name="password" placeholder="Password" value="">
             <span class="error-message">@error('password') {{$message}} @enderror</span>
+
             <button type="submit">Register</button>
+
             <p>Already have an account? <a href="{{'/login'}}">Login</a></p>
         </form>
     </div>

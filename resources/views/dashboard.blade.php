@@ -21,23 +21,27 @@
     <meta charset="UTF-8">
     <title>Gym Website</title>
     <link rel="stylesheet" href="{{ url('/css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{url('/css/nav.css')}}">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Classes</a></li>
-                <li><a href="#">Trainor</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{'/dashboard'}}" class="active">Home</a></li>
+                <li><a href="{{'about'}}">About</a></li>
+                <li><a href="{{'classes'}}">Classes</a></li>
+                <li><a href="{{'trainer'}}">Trainor</a></li>
+                <li><a href="{{'contact'}}">Contact</a></li>
+                <li><a href="{{'membership'}}">Membership</a></li>
+                <li><a href="/logout">Logout</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero-section">
         <div class="hero-content">
+            <h2>Welcome {{$data->first_name}} !</h2>
             <h1>Fit <span>Zone</span> </h1>
             <p>Eat . Sleep . Conquer. Repeat</p>
             <a href="#" class="btn">Join Now</a>

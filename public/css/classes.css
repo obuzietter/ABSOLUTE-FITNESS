@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card p {
+    margin-top: 5px;
+}
+
+.card .workout {
+    margin-top: 10px;
+}
+
+.card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 5px;
+    cursor: pointer;
+}
