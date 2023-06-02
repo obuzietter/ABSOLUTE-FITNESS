@@ -71,6 +71,7 @@
     <form action="/book-class" method="POST">
         @csrf
         {{-- <input type="text" hidden value="{{$data->first_name}}"> --}}
+       
         <div>
             <h3>
                 Sig Up For Class

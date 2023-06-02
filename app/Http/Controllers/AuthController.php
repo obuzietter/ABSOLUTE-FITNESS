@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Hash;
+use Illuminate\View\View;
 use Session;
 
 class AuthController extends Controller
@@ -81,7 +82,7 @@ class AuthController extends Controller
         
     }
 
-  
+
     public function logOut()
     {
         if (Session::has('sessionID')) {

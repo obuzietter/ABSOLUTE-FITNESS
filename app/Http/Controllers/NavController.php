@@ -16,6 +16,7 @@ class NavController extends Controller
     }
     public function classes()
     {
+        
         return view('classes');
     }
     public function trainer()
