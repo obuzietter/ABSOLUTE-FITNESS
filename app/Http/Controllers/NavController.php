@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Trainer;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Session;
 
 class NavController extends Controller
 {
@@ -16,12 +19,20 @@ class NavController extends Controller
     }
     public function classes()
     {
+        $data = array();
+
+        if (Session::has('sessionID')) {
+            $data = User::where('user_id', '=', Session::get('sessionID'))->first();
+
+        }
         
-        return view('classes');
+        return view('classes', compact('data'));
     }
     public function trainer()
     {
-        return view('trainer');
+        $data = array();
+        $data = Trainer::all();
+        return view('trainer', compact('data'));
     }
     public function membership()
     {

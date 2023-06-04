@@ -80,8 +80,10 @@ class AuthController extends Controller
         }
         return view('dashboard', compact('data'));
         
+        
     }
 
+    
 
     public function logOut()
     {

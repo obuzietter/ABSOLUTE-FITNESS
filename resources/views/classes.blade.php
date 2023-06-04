@@ -19,7 +19,7 @@
                 <li><a href="{{'contact'}}">Contact</a></li>
                 <li><a href="{{'membership'}}">Membership</a></li>
                 <li><a href="/logout">Logout</a></li>
-                <h1>CLASSES</h1>
+                
             </ul>
         </nav>
     </header>
@@ -70,8 +70,11 @@
 <section>
     <form action="/book-class" method="POST">
         @csrf
-        {{-- <input type="text" hidden value="{{$data->first_name}}"> --}}
-       
+       {{-- {{Session::get('sessionID')}}
+       {{$data->email}} --}}
+       <input type="text" name="first_name" id="first_name" value="{{$data->first_name}}" hidden>
+       <input type="text" name="last_name" id="last_name" value="{{$data->last_name}}" hidden>
+       <input type="text" name="email" id="email" value="{{$data->email}}" hidden>
         <div>
             <h3>
                 Sig Up For Class
@@ -104,6 +107,9 @@
     </form>
 </section>
     </main>
+    <footer>
+
+    </footer>
     
 </body>
 </html>

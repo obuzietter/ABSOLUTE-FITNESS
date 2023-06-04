@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GymClassController;
 use App\Http\Controllers\NavController;
+use App\Http\Controllers\TrainerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 /*
@@ -42,3 +43,5 @@ Route::get("contact", [NavController::class, 'contact']);
 
 //Route for posting class booking data
 Route::post('/book-class', [GymClassController::class, 'bookClass'])->name('book-class');
+
+
