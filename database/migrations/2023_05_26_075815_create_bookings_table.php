@@ -12,7 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('bookings', function (Blueprint $table) {
+            
             $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email');
+            $table->enum('class_type', ['YOGA', 'KARATE', 'DANCE', 'CARDIO', 'CROSSFIT', 'BOXING', 'BODY BUILDING', 'WEIGHT LIFTING', 'CYCLING', 'JIU JITSU']);
+            $table->string('phone');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

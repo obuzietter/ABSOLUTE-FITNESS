@@ -1,36 +1,144 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.card {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
+
+main {
+    position: relative;
 }
 
-.card h3 {
-    margin: 0;
+main section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.card p {
-    margin-top: 5px;
-}
-
-.card .workout {
-    margin-top: 10px;
-}
-
-.card button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 5px 10px;
+main .sub-message {
+    position: absolute;
+    animation: fade 2s linear forwards;
+    color: green;
+    background-color: transparent;
+    font-size: 40px;
+    border-radius: 50%;
+    z-index: 10;
+    width: 100%;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin-top: 5px;
-    cursor: pointer;
 }
+
+section form {
+    height: 500px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s ease;
+    margin: 20px;
+}
+
+section form:hover .image {
+    scale: 1.15;
+    transform: rotatez(5deg);
+}
+
+section form:hover .other-info {
+    transform: translate(0, -85%);
+    color: #f96d00;
+}
+
+section form .image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+}
+
+section form .image img {
+    height: 100%;
+    width: 100%;
+}
+
+section form .other-info {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    top: 85%;
+    left: 0;
+    background-color: rgba(10, 20, 11, .6);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: .5s ease;
+}
+
+section form:hover .signup-btn {
+    left: 50%;
+    color: #fff;
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+section form .other-info h3,
+section form .other-info span {
+    font-size: x-large;
+    font-weight: 700;
+    margin: 5px;
+}
+
+section form .signup-btn {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 200%;
+    transition: .5s ease;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transform-origin: top left;
+
+}
+
+section form .signup-btn button {
+    font-size: 20px;
+    padding: 8px;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+
+}
+
+section form .signup-btn:hover {
+    scale: 1.18;
+}
+
+
+
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    10% {
+        opacity: 1;
+        display: flex;
+    }
+
+    90% {
+        opacity: 1;
+        display: flex;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+
+    }
+}
+
+

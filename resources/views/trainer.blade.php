@@ -26,84 +26,25 @@
     </header>
     <main>
         <section>
-               <div class="card">
-                <div class="image">
-                    <img src="{{ url('/images/trainer.jpg') }}" alt="Trainer 1">
-                </div>
-                <div class="description">
-                    <h3>{{$data[0]->first_name}} {{$data[0]->last_name}}</h3>
-                    <p>{{$data[0]->slogan}}</p>
-                    <p>{{$data[0]->skills}}</p>
-                    <p>{{$data[0]->gender}}</p>
-                </div>
-            </div>
+            @foreach ($trainers as $trainer)
             <div class="card">
                 <div class="image">
                     <img src="{{ url('/images/trainer.jpg') }}" alt="Trainer 1">
                 </div>
                 <div class="description">
-                    <h3>{{$data[1]->first_name}} {{$data[1]->last_name}}</h3>
-                    <p>{{$data[1]->slogan}}</p>
-                    <p>{{$data[1]->skills}}</p>
-                    <p>{{$data[1]->gender}}</p>
+                    <h3>{{ $trainer->first_name }} {{ $trainer->last_name }}</h3>
+                    <p>{{ $trainer->slogan }}</p>
+                    <p>{{ $trainer->skills }}</p>
+                    <p>{{ $trainer->gender }}</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="image">
-                    <img src="{{ url('/images/trainer.jpg') }}" alt="Trainer 1">
-                </div>
-                <div class="description">
-                    <h3>{{$data[2]->first_name}} {{$data[2]->last_name}}</h3>
-                    <p>{{$data[2]->slogan}}</p>
-                    <p>{{$data[2]->skills}}</p>
-                    <p>{{$data[2]->gender}}</p>
-                </div>
-            </div>
-         
+            @endforeach
         </section>
         <hr>
-        <section>
-            <div class="card">
-                <div class="image">
-                    <img src="{{ url('/images/trainer.jpg') }}" alt="Trainer 1">
-                </div>
-                <div class="description">
-                    <h3>{{$data[3]->first_name}} {{$data[3]->last_name}}</h3>
-                    <p>{{$data[3]->slogan}}</p>
-                    <p>{{$data[3]->skills}}</p>
-                    <p>{{$data[3]->gender}}</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="{{ url('/images/trainer.jpg') }}" alt="Trainer 1">
-                </div>
-                <div class="description">
-                    <h3>{{$data[4]->first_name}} {{$data[4]->last_name}}</h3>
-                    <p>{{$data[4]->slogan}}</p>
-                    <p>{{$data[4]->skills}}</p>
-                    <p>{{$data[4]->gender}}</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="{{ url('/images/trainer.jpg') }}" alt="Trainer 1">
-                </div>
-                <div class="description">
-                    <h3>{{$data[5]->first_name}} {{$data[5]->last_name}}</h3>
-                    <p>{{$data[5]->slogan}}</p>
-                    <p>{{$data[5]->skills}}</p>
-                    <p>{{$data[5]->gender}}</p>
-                </div>
-            </div>
-        </section>
+     
     </main>
     <footer>
-<ul>
-    @foreach ($data as $trainer)
-        <li>{{$trainer->email}}</li>
-    @endforeach
-</ul>
+        
     </footer>
 
 </body>

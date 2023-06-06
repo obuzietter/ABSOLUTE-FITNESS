@@ -8,9 +8,8 @@
 main section {
     display: flex;
     justify-content: space-evenly;
-    /* border: 1px solid red; */
     padding: 50px;
-    /* flex-wrap:wrap; */
+    flex-wrap: wrap; 
 }
 
 main section .card {
@@ -27,6 +26,7 @@ main section .card:hover{
     border-radius: 20px;
     box-shadow: 10px 10px 50px #ff9900;
     border:1px solid #ff9900;
+    z-index: 5;
 }
 
 main section .card:hover .description {

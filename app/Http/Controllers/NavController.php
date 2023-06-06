@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GymClass;
 use App\Models\Trainer;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -25,14 +26,15 @@ class NavController extends Controller
             $data = User::where('user_id', '=', Session::get('sessionID'))->first();
 
         }
-        
-        return view('classes', compact('data'));
+        $classes = array();
+        $classes = GymClass::all();        
+        return view('classes', compact('data', 'classes'));
     }
     public function trainer()
     {
-        $data = array();
-        $data = Trainer::all();
-        return view('trainer', compact('data'));
+        $trainers = array();
+        $trainers = Trainer::all();
+        return view('trainer', compact('trainers'));
     }
     public function membership()
     {

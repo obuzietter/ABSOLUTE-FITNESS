@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,17 +12,14 @@ return new class extends Migration
     {
         Schema::create('gym_classes', function (Blueprint $table) {
             $table->id();
-            // $table->unsignedBigInteger('gym_class_id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('email');
-            $table->string('class_type');
-            $table->string('phone');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->string('class_name');
+            $table->string('instructor_fname');
+            $table->string('instructor_lname');
+            $table->text('description');
+            $table->integer('fee');        
             $table->boolean('active')->default(true);
             $table->timestamps();
-            // $table->foreign('gym_class_id')->references('user_id')->on('users')->onDelete('cascade');            
+            
         });
     }
 
@@ -35,3 +31,4 @@ return new class extends Migration
         Schema::dropIfExists('gym_classes');
     }
 };
+

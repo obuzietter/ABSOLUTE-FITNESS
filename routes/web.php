@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\GymClassController;
 use App\Http\Controllers\NavController;
 use App\Http\Controllers\TrainerController;
@@ -43,5 +44,8 @@ Route::get("contact", [NavController::class, 'contact']);
 
 //Route for posting class booking data
 Route::post('/book-class', [GymClassController::class, 'bookClass'])->name('book-class');
+//Route for posting trainer booking data
+Route::post('/book', [BookingController::class, 'bookNow'])->name('book');
+
 
 
