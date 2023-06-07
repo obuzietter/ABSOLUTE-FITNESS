@@ -18,12 +18,20 @@ main .sub-message {
     position: absolute;
     animation: fade 2s linear forwards;
     color: green;
-    background-color: transparent;
-    font-size: 40px;
-    border-radius: 50%;
+
     z-index: 10;
-    width: 100%;
+    width: 50%;
+    transform: translateX(50%);
+    margin-top: 0;
     text-align: center;
+    padding: 35px;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(15px);
 }
 
 section form {
@@ -115,30 +123,34 @@ section form .signup-btn:hover {
 }
 
 
-
+.fail {
+    color: red;
+}
 
 
 @keyframes fade {
     0% {
         opacity: 0;
         display: none;
+        margin-top: -300px;
     }
 
     10% {
         opacity: 1;
         display: flex;
+        margin-top: 0;
     }
 
     90% {
         opacity: 1;
         display: flex;
+        margin-top: 0;
     }
 
     100% {
         opacity: 0;
         display: none;
+        margin-top: -300px;
 
     }
 }
-
-

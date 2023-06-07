@@ -1,5 +1,14 @@
 header {
-    background-color: #333;
+    /* background: radial-gradient(
+        circle at -18.9% 51.2%,
+        rgb(255, 124, 0) 0%,
+        rgb(255, 124, 0) 15.9%,
+        rgb(255, 163, 77) 15.9%,
+        rgb(255, 163, 77) 24.4%,
+        rgb(19, 30, 37) 24.5%,
+        rgb(19, 30, 37) 66%
+    ); */
+    background-color: rgb(62, 62, 62);
     padding: 20px;
     color: #fff;
     position: sticky;
@@ -23,13 +32,12 @@ header {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
-    transition: .5s ease;
-    
+    transition: 0.5s ease;
 }
 
-.navbar ul li a:hover{
+.navbar ul li a:hover {
     color: #f96d00;
-    text-decoration: underline;   
+    text-decoration: underline;
 }
 
 /* .navbar ul li a.active {

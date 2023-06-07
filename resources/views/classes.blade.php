@@ -32,7 +32,7 @@
                 <div class="success">{{ Session::get('success') }}</div>
             @endif
             @if (Session::has('fail'))
-                <div class="success">{{ Session::get('fail') }}</div>
+                <div class="fail">{{ Session::get('fail') }}</div>
             @endif
         </section>
         <hr>
