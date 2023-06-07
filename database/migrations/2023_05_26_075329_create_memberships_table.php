@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('memberships', function (Blueprint $table) {
             $table->id();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email')->unique();
             $table->string('package_name');
-            $table->text('description');
-            $table->text('inclusions');
-            $table->enum('duration', ['monthly', 'quarterly', 'annually']);
+            $table->integer('duration');
             $table->decimal('price', 10, 2);
-            $table->boolean('active')->default(false);
+            $table->date('start_date');
+            $table->enum('status', ['ACTIVE', 'INACTIVE'])->default('INACTIVE');
             $table->timestamps();
         });
     }

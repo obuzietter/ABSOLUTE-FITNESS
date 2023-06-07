@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #4e0894;
+}
+ main .membership-cards{
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid black;
+    background-image: url('/images/membership_no_bg.png');
+ }
+ main .membership-cards .card{
+    width: 100%;
+    display: flex;
+ }
+ main .membership-cards .card .image{
+    width: 100%;
+    border: 2px solid black;
+}
+main .membership-cards .card .image img{
+    width: 50%;
+    border: 2px solid black;
+}
+main .membership-cards .card .other{
+
+}
