@@ -28,20 +28,52 @@
         <section class="hero-section">
             <h1>Get your membership right now</h1>
         </section>
-        <section class="membership-cards">
+        {{-- <section class="membership-cards">
             
                 <div class="other">
                     <div class="description">
-sasa
+
                     </div>
                     <div class="btn">
 
                     </div>
                 </div>
             </div>
+        </section> --}}
+        
+        <section class="form">
+            <form action="{{'post-membership'}}" method="POST">
+                @csrf
+                <input type="text" name="user_id" id="" value="{{$user->user_id}}" hidden>
+                <input type="text" name="first_name" id="" value="{{$user->first_name}}" hidden>
+                <input type="text" name="last_name" id="" value="{{$user->last_name}}" hidden>
+                <input type="email" name="email" id="" value="{{$user->email}}" hidden>
+                <label for="package_name">Package</label>
+                <select name="package_name" id="package_name">
+                    <option value="" hidden>SELECT PACKAGE</option>
+                    @foreach ($packages as $package)
+                        <option value="{{ $package->package_name }}">{{ $package->package_name }}</option>
+                    @endforeach
+                </select>
+                <label for="start_date">Start Date</label>
+                <input type="date" name="start_date" id="start_date">
+                <label for="end_date">End Date</label>
+                <input type="date" name="end_date" id="end_date">
+                <label for="duration">Duration</label>
+                <input type="number" name="duration" id="duration">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price">
+                <label for="phone">Phone number</label>
+                <input type="tel" name="phone" id="phone">
+                <input type="text" name="status" id="status" value="ACTIVE" hidden>
+                <button type="submit">SUBMIT</button>
+            </form>
+            
         </section>
-    </main>
 
+        <button id="button">DATE</button>
+    </main>
+<script src="{{'/js/membership.js'}}"></script>
 </body>
 
 </html>

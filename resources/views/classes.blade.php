@@ -60,6 +60,12 @@
                 </form>
             @endforeach
         </section>
+        <section>
+            <form action="{{route('go')}}" method="post">
+                @csrf
+                <button type="submit">GO </button>
+                </form>
+        </section>
     </main>
     {{-- <footer>
         <ul>

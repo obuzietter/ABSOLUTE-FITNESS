@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\GymClass;
+use App\Models\Package;
 use App\Models\Trainer;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -38,7 +39,11 @@ class NavController extends Controller
     }
     public function membership()
     {
-        return view('membership');
+        $user = array();
+        $user = User::where('user_id', '=', Session::get('sessionID'))->first();
+        $packages = array();
+        $packages = Package::all();
+        return view('membership', compact('packages', 'user'));
     }
     public function contact()
     {

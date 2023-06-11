@@ -12,15 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('memberships', function (Blueprint $table) {
-            $table->id();
-            $table->foreign('user_id')->references('id')->on('users');
+        $table->id();
+            $table->integer('user_id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('package_name');
             $table->integer('duration');
             $table->decimal('price', 10, 2);
             $table->date('start_date');
+            $table->date('end_date');
+            $table->string('phone');
             $table->enum('status', ['ACTIVE', 'INACTIVE'])->default('INACTIVE');
             $table->timestamps();
         });
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('memberships');
+        //
     }
 };

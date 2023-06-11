@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="{{ '/dashboard' }}" class="active">Home</a></li>
+                <li><a href="{{ '/dashboard' }}">Home</a></li>
                 <li><a href="{{ 'about' }}">About</a></li>
                 <li><a href="{{ 'classes' }}">Classes</a></li>
                 <li><a href="{{ 'trainer' }}">Trainer</a></li>
