@@ -17,7 +17,7 @@
             @if(Session::has ('fail'))
             <div class="success">{{Session::get('fail')}}</div>
             @endif
-            
+
             <input type="text" name="firstName" placeholder="First Name" value="{{old('firstName')}}">
             <span class="error-message">@error('firstName') {{$message}} @enderror</span>
 

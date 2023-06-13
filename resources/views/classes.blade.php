@@ -27,6 +27,17 @@
     </header>
 
     <main>
+        <section class="hero">
+            <h1>Our Classes</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error ratione expedita nobis laboriosam
+                consequatur fuga aliquam optio ex nulla! Pariatur deserunt nostrum necessitatibus, ex dicta eum
+                recusandae officia id, ut, nisi soluta odit culpa quibusdam cumque nobis et eaque consequuntur sequi
+                corrupti. Totam blanditiis facilis perferendis quam iste tenetur. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quo vel reprehenderit delectus minima animi numquam facilis veniam iure architecto?
+                Incidunt inventore illo odit nulla placeat cum amet ducimus dolore commodi.lorem20 Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Placeat dolor nihil, aliquid dignissimos vitae tempore similique
+                fuga quibusdam in obcaecati!</p>
+        </section>
         <section class="sub-message">
             @if (Session::has('success'))
                 <div class="success">{{ Session::get('success') }}</div>
@@ -36,7 +47,7 @@
             @endif
         </section>
         <hr>
-        <section>
+        {{-- <section>
             @foreach ($classes as $class)
                 <form action="/book" method="POST">
                     @csrf
@@ -59,13 +70,65 @@
                     </div>
                 </form>
             @endforeach
+        </section> --}}
+        <section class="signup-table">
+            <table>
+                <thead>
+                    <th>
+                        Class
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Instructor
+                    </th>
+                    <th>
+                        Fee
+                    </th>
+                    <th>
+
+                    </th>
+                </thead>
+                <tbody>
+                    @foreach ($classes as $class)
+                        <form action="/book" method="POST">
+                            @csrf
+                            <tr>
+                                <td>
+                                    {{ $class->class_name }}
+                                </td>
+                                <td>
+                                    {{ $class->description }}
+                                </td>
+                                <td>
+                                    {{ $class->instructor_fname }} {{ $class->instructor_lname }}
+                                </td>
+                                <td>
+                                    {{ $class->fee }}
+                                </td>
+                                <td>
+                                    <input type="text" name="first_name" id=""
+                                        value="{{ $data->first_name }}" hidden>
+                                    <input type="text" name="last_name" id=""
+                                        value="{{ $data->last_name }}" hidden>
+                                    <input type="text" name="email" id="" value="{{ $data->email }}"
+                                        hidden>
+                                    <input type="text" name="class_name" id=""
+                                        value="{{ $class->class_name }}" hidden>
+                                    <button type="submit">
+                                        Sign Up
+                                    </button>
+                                </td>
+                            </tr>
+                        
+                        </form>
+                        
+                    @endforeach
+                </tbody>
+            </table>
         </section>
-        <section>
-            <form action="{{route('go')}}" method="post">
-                @csrf
-                <button type="submit">GO </button>
-                </form>
-        </section>
+
     </main>
     {{-- <footer>
         <ul>

@@ -1,0 +1,281 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    animation-duration: 1s;
+    animation-name: appear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+body {
+    /* background-color: #000; */
+
+}
+
+main {
+
+    /* background-image: url(https://images.pexels.com/photos/903171/pexels-photo-903171.jpeg?auto=compress&cs=tinysrgb&w=1600); */
+}
+
+main .hero {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ff9900; */
+    background: transparent;
+    color: white;
+    background: url(https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg?auto=compress&cs=tinysrgb&w=1600);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* .hero::before{
+    content: "";
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+        position: absolute;
+        background: url(/images/main.jpg) no-repeat;
+        background-size: cover;  
+        background-position: center;
+        margin-top: -100px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: .5;
+        background-attachment: fixed;
+} */
+main .hero h1 {
+    font-size: 4rem;
+}
+
+main .hero p {
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+main .about-info {
+    position: relative;
+    width: 100%;
+    /* border: 1px solid blue; */
+    height: 500px;
+}
+
+main .about-info .cards {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -10%;
+
+}
+
+main .about-info .cards .card {
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    box-shadow: 10px 5px 55px #000;
+
+}
+
+main .about-info .cards .image {
+    width: 40%;
+    height: 100%;
+    box-shadow: 10px 5px 55px #000;
+    background: url(/images/sit-ups.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+
+}
+
+main .about-info .cards .image img {
+    width: 100%;
+    height: 100%;
+
+}
+
+main .extras {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+}
+
+main .extras .extra {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    box-shadow: 10px 5px 55px #000;
+}
+
+main .extras .extra .image {
+    height: 100%;
+    width: 100%;
+}
+
+main .extras .extra .image img {
+    height: 100%;
+    width: 100%;
+    transition: .5s linear;
+}
+
+.description {
+    color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 85%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .5s linear;
+}
+
+.description h2 {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.description p {
+    /* display: none; */
+    text-align: center;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+.extra:hover .description {
+    top: 0;
+
+    transition: .5s ease-in-out;
+}
+
+.extra:hover .description p {
+    display: block;
+    opacity: 1;
+}
+
+.extra:hover .image img {
+    scale: 1.2;
+}
+
+main .additional {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    /* border: 1px solid red; */
+    cursor: normal;
+}
+
+main .additional .card {
+    width: 50%;
+    height: 80%;
+
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    transition: transform 0.8s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: 10px 5px 55px #000;
+}
+
+.card-front {
+    background-color: #3498db;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    border: 10px solid #3498db;
+    /* border-radius: 10px; */
+    justify-content: center;
+    font-size: 24px;
+}
+
+.card-back {
+    background-color: #ff5722;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #ff5722;
+    /* border-radius: 10px; */
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    transition: .2s ease-in-out;
+}
+
+.card-back p a {
+    text-decoration: none;
+    border: 1px solid white;
+    background: white;
+    color: #ff5722;
+    padding: 10px;
+    box-shadow: 10px 5px 55px #000;
+}
+
+.card-back p:hover {
+    transform: scale(1.12);
+}
+
+
+/* .additional .additional-item{
+    height: 300px;
+    flex-basis: 40%;
+    border: 1px solid red;
+} */
+
+footer {
+    height: 150px;
+}
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
