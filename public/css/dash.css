@@ -7,16 +7,14 @@
 }
 main{
     /* border: 2px solid red; */
-    height: 100vh;
-    background-image: url(/images/kicker.jpg);
+    /* height: 100vh; */
     /* background-position: center; */
+    background-image: url(/images/kicker.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-main{
-    position: relative;
-}
+
 main .hero{
     /* background-color: whitesmoke; */
     height: 100vh;
@@ -51,9 +49,72 @@ main .hero{
     background-color: green;
 }
 
-.main-content{
-    height: 1000px;
+main .main-row{
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    height: 600px;
+    background-color: white;
 }
+main .main-row .image{
+    width: 45%;
+    background-image: url(/images/boxer.jpg);
+    /* background-position: 100% 0%; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+main .main-row .description{
+    width: 45%;
+    /* border: solid black thin; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5rem;
+    background-color: #fcfcfc;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+main .main-row .description:hover{
+    box-shadow: 10px 10px 50px black;
+}
+main .separator{
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    background-color: white;
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+.separator h1{
+    width: 60%;
+    /* border: thin blue solid; */
+    text-align: center;
+    
+}
+main .extra{
+    display: flex;
+}
+main .extra .image{
+    width: 50%;
+    height: 500px;
+    
+}
+main .extra .desc{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    background-color: #fcfcfc;
+}
+/* .main-content{
+    height: 1000px;
+} */
 footer {
     background-color: #333;
     padding: 10px;

@@ -95,7 +95,7 @@ main section .card .description {
     /* transform: translate(-50%, -50%); */
     flex-basis: 50%;
     height: 100%;
-    background-color: rgb(252, 252, 252);
+    background-color: #fcfcfc;
     color: black;
     display: flex;
     flex-direction: column;
