@@ -5,28 +5,35 @@
     /* border: 1px solid red; */
 }
 body{
-    /* background-image: url(/images/pexels-sabel-blanco-1480520.jpg); */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+    
 }
 main .hero{
     height: 300px;
-    background-color: #ff9900;
+    /* background-color: #ff9900; */
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(/images/pexels-sabel-blanco-1480520.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 main .cards-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
       /* height: 600px; */
+      padding-top: 15px;
       row-gap: 1em;
-      border: 1px solid blue;
+      /* border: 1px solid blue; */
+      
+    
 }
 
 main section .card {
