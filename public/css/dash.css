@@ -1,0 +1,62 @@
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main{
+    /* border: 2px solid red; */
+    height: 100vh;
+    background-image: url(/images/kicker.jpg);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+main{
+    position: relative;
+}
+main .hero{
+    /* background-color: whitesmoke; */
+    height: 100vh;
+    position: relative;
+}
+.hero .hero-content{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-content h2{
+    font-size: 3.4rem;
+
+}
+.hero-content h1{
+    font-size: 4rem;
+}
+.hero-content p{
+    font-size: 2.5rem;
+}
+.hero-content a{
+    padding: 5px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: green;
+}
+
+.main-content{
+    height: 1000px;
+}
+footer {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}

@@ -29,14 +29,7 @@
     <main>
         <section class="hero">
             <h1>Our Classes</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error ratione expedita nobis laboriosam
-                consequatur fuga aliquam optio ex nulla! Pariatur deserunt nostrum necessitatibus, ex dicta eum
-                recusandae officia id, ut, nisi soluta odit culpa quibusdam cumque nobis et eaque consequuntur sequi
-                corrupti. Totam blanditiis facilis perferendis quam iste tenetur. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Quo vel reprehenderit delectus minima animi numquam facilis veniam iure architecto?
-                Incidunt inventore illo odit nulla placeat cum amet ducimus dolore commodi.lorem20 Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. Placeat dolor nihil, aliquid dignissimos vitae tempore similique
-                fuga quibusdam in obcaecati!</p>
+            <p>Welcome to our classes page at XYZ Gym! Our classes are designed to help you achieve your fitness goals, no matter your age or fitness level. Whether you're a beginner looking to kickstart your fitness journey or a seasoned athlete seeking new challenges, we have a wide range of classes to cater to your needs. From high-energy cardio workouts that will get your heart pumping and calories burning, to strength and conditioning sessions that will sculpt and tone your muscles, we offer a variety of options to keep you motivated and engaged. Our experienced and certified instructors are dedicated to creating a supportive and inclusive environment, ensuring that every participant feels comfortable and confident throughout their fitness class experience. So why wait? Join us today and take the first step towards a healthier, stronger, and happier you!</p>
         </section>
         <section class="sub-message">
             @if (Session::has('success'))

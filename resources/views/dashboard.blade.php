@@ -1,19 +1,3 @@
-<!-- <h1> WELCOME TO YOUR DASHBOARD </h1>
-<hr>
-<table>
-    <thead>
-        <th>Full Name</th>
-        <th>Email</th>
-        <th>Logout</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td> {{ $data->name }} </td>
-            <td> {{ $data->email }} </td>
-            <td> <a href="/logout"> Logout </a> </td>
-        </tr>
-    </tbody>
-</table> -->
 <!DOCTYPE html>
 <html>
 
@@ -22,6 +6,7 @@
     <title>Gym Website</title>
     <link rel="stylesheet" href="{{ url('/css/dashboard.css') }}">
     <link rel="stylesheet" href="{{url('/css/nav.css')}}">
+    <link rel="stylesheet" href="{{url('/css/dash.css')}}">
 </head>
 
 <body>
@@ -39,7 +24,24 @@
         </nav>
     </header>
 
-    <section id="hero-section">
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome {{$data->first_name}} !</h2>
+            <h1>Fit <span>Zone</span> </h1>
+            <p>Eat . Sleep . Conquer. Repeat</p>
+            <a href="#" class="btn">Join Now</a>
+        </div>
+
+          
+    </section>
+    <section class="main-content">
+        sad
+    </section>
+
+</main>
+
+    {{-- <section class="hero-section">
         <div class="hero-content">
             <h2>Welcome {{$data->first_name}} !</h2>
             <h1>Fit <span>Zone</span> </h1>
@@ -87,9 +89,6 @@
         </div>
     </section>
 
-    
-
-
     <section id="contact-section">
         <h2>Contact Us</h2>
         <form>
@@ -104,11 +103,12 @@
 
             <input type="submit" value="Send Message" class="btn">
         </form>
-    </section>
+    </section> --}}
 
     <footer>
         <p>&copy; 2023 Absolute Fitness Gym . All rights reserved.</p>
     </footer>
 </body>
+
 
 </html>
