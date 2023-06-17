@@ -49,7 +49,7 @@
                     </p>
                 </div>
                 <div class="image">
-                    {{-- <img src="{{ url('/images/sit-ups.jpg') }}" alt=""> --}}
+                    {{-- background image goes here --}}
                 </div>
             </div>
         </section>
@@ -111,18 +111,6 @@
             </div>
         </section>
         <section class="additional">
-            {{--<div class="additional-item">
-
-                 <h2>Begin Your Fitness Journey Today</h2>
-                <p>
-                    Whether you're looking to lose weight, build strength, increase flexibility, or simply improve your
-                    overall well-being, we are here to support you. Visit our gym today and discover the difference that
-                    a dedicated fitness center can make in helping you achieve your goals. Our friendly staff will be
-                    delighted to provide a tour, answer any questions you may have, and help you get started on your
-                    fitness journey. Let's embark on this transformative adventure together!
-                </p>
-                <a href="{{ 'classes' }}">TRY NOW</a>
-            </div> --}}
                 <div class="card">
                     <div class="card-inner">
                         <div class="card-front">

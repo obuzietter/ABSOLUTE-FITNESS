@@ -52,7 +52,7 @@
                     comfortable and confident throughout their fitness class experience. So why wait? Join us today and
                     take the first step towards a healthier, stronger, and happier you!
                 </p>
-                <button>Sign Up</button>
+                <button class="btn">Sign Up</button>
             </div>
         </section>
         <section class="main-row">
@@ -75,7 +75,7 @@
                     XYZ Gym, we are committed to delivering the finest fitness experience possible, and we eagerly
                     anticipate welcoming you to our vibrant community of health enthusiasts. Join us today and embark on
                     a remarkable fitness journey tailored to your needs!</p>
-                <button>Join Us</button>
+                <button class="btn">Join Us</button>
             </div>
         </section>
         
@@ -104,19 +104,17 @@
                     tell a story and let your users know a little more about you.</p>
             </div>
             <div class="image">
-                <video autoplay loop>
-                    <source src="/videos/test.mp4" type="">
-                </video>
+               <div class="pic"></div>
             </div>
         </section>
         <section class="extra">
             <div class="image">
                 <video autoplay loop>
-                    <source src="https://v4.cdnpk.net/videvo_files/video/free/video0461/large_watermarked/_import_60d714ac7dd357.38440934_FPpreview.mp4" type="">
+                    <source src="/videos/test.mp4" type="">
                 </video>
             </div>
             <div class="desc">
-                <h3>Motivation</h3>
+                <h3>Community</h3>
                 <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
                     double click me to add your own content and make changes to the font. I’m a great place for you to
                     tell a story and let your users know a little more about you</p>

@@ -1,19 +1,18 @@
+:root {
+    --black: #1b2223;
+    --dark: #3a4f50;
+    --green: #0ef6cc;
+    --light: #f4f4fd;
+  }
 header {
-    /* background: radial-gradient(
-        circle at -18.9% 51.2%,
-        rgb(255, 124, 0) 0%,
-        rgb(255, 124, 0) 15.9%,
-        rgb(255, 163, 77) 15.9%,
-        rgb(255, 163, 77) 24.4%,
-        rgb(19, 30, 37) 24.5%,
-        rgb(19, 30, 37) 66%
-    ); */
-    background-color: rgb(62, 62, 62);
+    background-color: var(--black);
     padding: 20px;
-    color: #fff;
+    color: var(--light);
     position: sticky;
     top: 0;
     z-index: 6;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar ul {
@@ -29,17 +28,16 @@ header {
 }
 
 .navbar ul li a {
-    color: #fff;
+    color: var(--light);
     text-decoration: none;
     padding: 5px 10px;
     transition: 0.5s ease;
+    font-size: 20px;
 }
 
 .navbar ul li a:hover {
-    color: #f96d00;
+    color: var(--green);
     text-decoration: underline;
 }
 
-/* .navbar ul li a.active {
-    font-weight: bold;
-} */
+

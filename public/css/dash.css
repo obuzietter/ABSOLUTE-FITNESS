@@ -1,3 +1,10 @@
+:root {
+    --black: #1b2223;
+    --dark: #3a4f50;
+    --green: #0ef6cc;
+    --light: #f4f4fd;
+  }
+  
  *{
     padding: 0;
     margin: 0;
@@ -28,7 +35,7 @@ main .hero{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: var(--light);
 }
 
 .hero-content h2{
@@ -42,11 +49,10 @@ main .hero{
     font-size: 2.5rem;
 }
 .hero-content a{
-    padding: 5px;
+    /* padding: 5px; */
     margin-top: 15px;
     text-decoration: none;
-    color: #fff;
-    background-color: green;
+    
 }
 
 main .main-row{
@@ -55,7 +61,7 @@ main .main-row{
     padding-top: 35px;
     padding-bottom: 35px;
     height: 600px;
-    background-color: white;
+    background-color: var(--light);
 }
 main .main-row .image{
     width: 45%;
@@ -74,14 +80,14 @@ main .main-row .description{
     align-items: center;
     justify-content: space-around;
     padding: 5rem;
-    background-color: #fcfcfc;
+    background-color: var(--light);
     transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 main .main-row .description:hover{
     box-shadow: 10px 10px 50px black;
 }
 main .separator{
-    color: aqua;
+    color: var(--dark);
     display: flex;
     justify-content: center;
     font-size: 3rem;
@@ -103,6 +109,19 @@ main .extra .image{
     height: 500px;
     
 }
+main .extra .image video{
+    width: 100%;
+    /* height: 100%; */
+}
+main .extra .image .pic{
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/runner.jpg);
+    background-position: 100% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 main .extra .desc{
     width: 50%;
     display: flex;
@@ -110,14 +129,59 @@ main .extra .desc{
     justify-content: center;
     align-items: center;
     padding: 5rem;
-    background-color: #fcfcfc;
+    background-color: var(--light);
+    /* height: 500px; */
+    /* opacity: 0; */
 }
 /* .main-content{
     height: 1000px;
 } */
 footer {
-    background-color: #333;
+    background-color: var(--black);
     padding: 10px;
-    color: #fff;
+    color: var(--light);
     text-align: center;
+    margin-top: 35px;
+    /* margin-bottom: 35px; */
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
+.btn {
+    padding: 0.8em 1.8em;
+    border: 2px solid var(--green);
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: var(--green);
+    
+   }
+   
+   .btn::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: var(--green);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .btn:hover::before {
+    width: 105%;
+   }
+   
+   .btn:hover {
+    color: var(--light);
+    box-shadow: 5px 5px 10px var(--green);
+   }
+   

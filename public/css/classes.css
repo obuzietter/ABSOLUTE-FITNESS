@@ -1,8 +1,14 @@
+:root {
+    --black: #1b2223;
+    --dark: #3a4f50;
+    --green: #0ef6cc;
+    --light: #f4f4fd;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
 }
 
 main {
@@ -14,180 +20,93 @@ main section {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.hero{
-    color: white;
+
+.hero {
+    color: var(--light);
     height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(/images/main.jpg);
+    background: url(/images/feet.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    
 }
-.hero h1{
+
+.hero h1 {
     font-size: 4rem;
 }
+
 main .hero p {
     width: 70%;
     font-size: 1.2rem;
 }
+
 main .sub-message {
     position: absolute;
     animation: fade 2s linear forwards;
-    color: green;
-
+    color: var(--green);
     z-index: 10;
     width: 50%;
     transform: translateX(50%);
     margin-top: 0;
     text-align: center;
     padding: 35px;
-
-    border: 1px solid rgba(255, 255, 255, .25);
-    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-
     backdrop-filter: blur(15px);
-
-  
 }
-
-section form {
-    height: 500px;
-    width: 400px;
-    position: relative;
-    overflow: hidden;
-    transition: .5s ease;
-    margin: 20px;
-}
-
-section form:hover .image {
-    scale: 1.15;
-    transform: rotatez(5deg);
-}
-
-section form:hover .other-info {
-    transform: translate(0, -85%);
-    color: #f96d00;
-}
-
-section form .image {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    transition: .5s ease;
-}
-
-section form .image img {
-    height: 100%;
-    width: 100%;
-}
-
-section form .other-info {
-    position: absolute;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    top: 85%;
-    left: 0;
-    background-color: rgba(10, 20, 11, .6);
-    backdrop-filter: blur(10px);
-    text-align: center;
-    transition: .5s ease;
-}
-
-section form:hover .signup-btn {
-    left: 50%;
-    color: #fff;
-    background-color: green;
-    border: 2px solid green;
-    border-radius: 10px;
-}
-
-section form .other-info h3,
-section form .other-info span {
-    font-size: x-large;
-    font-weight: 700;
-    margin: 5px;
-}
-
-section form .signup-btn {
-    position: absolute;
-    color: #fff;
-    top: 50%;
-    left: 200%;
-    transition: .5s ease;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    transform-origin: top left;
-
-}
-
-section form .signup-btn button {
-    font-size: 20px;
-    padding: 8px;
-    font-weight: bold;
-    color: #fff;
-    background-color: transparent;
-    border: transparent;
-    border-radius: 10px;
-    transition: .5s ease;
-    cursor: pointer;
-
-}
-
-section form .signup-btn:hover {
-    scale: 1.18;
-}
-
 
 .fail {
     color: red;
 }
 
-.signup-table{
-    display: flex;
-    padding: 30px;
-    
+.signup-table {
+    padding-top: 100px;
 }
-.signup-table table{
+
+.signup-table table {
     width: 80%;
     table-layout: auto;
     row-gap: 1cm;
     border-collapse: collapse;
 }
-.signup-table table tr td, .signup-table table thead th{
-padding: 15px;
-/* width: max-content; */
-/* border-bottom: #f96d00 1px solid; */
-/* border-right: #f96d00 1px solid; */
-border-style: none;
+
+.signup-table table tr td,
+.signup-table table thead th {
+    padding: 15px;
+    border-style: none;
 }
-.signup-table table tr{
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
-    transition: .2s ease;
+
+.signup-table table tr {
+    transition: 0.2s ease;
     cursor: default;
 }
-.signup-table table tr:hover{
-    background-color: #f96d00;
-    transform: scale(1.05);
 
+.signup-table table tr:hover {
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: 5px 5px 30px var(--black);
+    transform: scale(1.02);
 }
-.signup-table table button{
-    background-color: green;
-    color: white;
+
+.signup-table table button {
+    background-color: transparent;
     font-size: 20px;
+    color: white;
     border-style: none;
     padding: 5px;
+    transition: .2s ease-in-out;
     cursor: pointer;
 }
-
+.signup-table table button:hover{
+    color: var(--green);
+    border-bottom: 1px solid#0ef6cc;
+    
+}
 @keyframes fade {
     0% {
         opacity: 0;
@@ -211,7 +130,6 @@ border-style: none;
         opacity: 0;
         display: none;
         margin-top: -300px;
-
     }
 }
 
