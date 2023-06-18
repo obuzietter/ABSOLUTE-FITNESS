@@ -28,19 +28,62 @@
         <section class="hero-section">
             <h1>Get your membership right now</h1>
         </section>
-        {{-- <section class="membership-cards">
-            
-                <div class="other">
-                    <div class="description">
-
-                    </div>
-                    <div class="btn">
-
-                    </div>
+        <section class="membership-cards">
+            {{-- <div class="card">
+                <div class="image">
+                    <img src="https://img.freepik.com/free-photo/aesthetic-wallpaper-with-gold-bars_23-2149872244.jpg?size=626&ext=jpg&uid=R97350360&ga=GA1.2.328877591.1686104943&semt=sph"
+                        alt="">
+                </div> --}}
+            <div class="card">
+                <div class="info">
+                    <h3>{{ $packages[2]->package_name }} Membership</h3>
+                    <span>$ {{ $packages[2]->price }}</span>
+                    <p> {{ $packages[2]->description }} </p>
+                    <i>Valid For One Month</i>
+                    <button id="form"><a href="#form">GET</a></button>
+                    <hr width="90%">
+                    <h4>Services</h4>
+                    <p>{{ $packages[2]->services }}</p>
+                    <h4>Features</h4>
+                    <p>{{ $packages[2]->features }}</p>
+                    <h4>Restrictions</h4>
+                    <p>{{ $packages[2]->restrictions }}</p>
                 </div>
             </div>
-        </section> --}}
-        
+            <div class="card">
+                <div class="info">
+                    <h3>{{ $packages[0]->package_name }} Membership</h3>
+                    <span>$ {{ $packages[0]->price }}</span>
+                    <p> {{ $packages[0]->description }} </p>
+                    <i>Valid For One Month</i>
+                    <button id="form"><a href="#form">GET</a></button>
+                    <hr width="90%">
+                    <h4>Services</h4>
+                    <p>{{ $packages[0]->services }}</p>
+                    <h4>Features</h4>
+                    <p>{{ $packages[0]->features }}</p>
+                    <h4>Restrictions</h4>
+                    <p>{{ $packages[0]->restrictions }}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h3>{{ $packages[1]->package_name }} Membership</h3>
+                    <span>$ {{ $packages[1]->price }}</span>
+                    <p> {{ $packages[1]->description }} </p>
+                    <i>Valid For One Month</i>
+                    <button id="form"><a href="#form">GET</a></button>
+                    <hr width="90%">
+                    <h4>Services</h4>
+                    <p>{{ $packages[1]->services }}</p>
+                    <h4>Features</h4>
+                    <p>{{ $packages[1]->features }}</p>
+                    <h4>Restrictions</h4>
+                    <p>{{ $packages[1]->restrictions }}</p>
+                </div>
+            </div>
+        </section>
+
         <section class="form">
             <form action="{{'post-membership'}}" method="POST">
                 @csrf
@@ -60,20 +103,22 @@
                 <label for="end_date">End Date</label>
                 <input type="date" name="end_date" id="end_date">
                 <label for="duration">Duration</label>
-                <input type="number" name="duration" id="duration">
+                <span id="date-error"></span>
+                <input type="number" name="duration" id="duration" disabled>
                 <label for="price">Price</label>
                 <input type="number" name="price" id="price">
                 <label for="phone">Phone number</label>
                 <input type="tel" name="phone" id="phone">
                 <input type="text" name="status" id="status" value="ACTIVE" hidden>
                 <button type="submit">SUBMIT</button>
+                
             </form>
             
         </section>
 
-        <button id="button">DATE</button>
+        <button id="btn">CALCULATE</button>
     </main>
-<script src="{{'/js/membership.js'}}"></script>
+    <script src="{{'/js/membership.js'}}"></script>
 </body>
 
 </html>

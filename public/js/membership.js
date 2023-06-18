@@ -1,21 +1,43 @@
-const startDate = document.getElementById('start_date')
-const endDate = document.getElementById('end_date')
-const btn = document.getElementById('button')
+let startDate = document.getElementById("start_date");
+let endDate = document.getElementById("end_date");
+let duration = document.getElementById("duration");
+let dateError = document.getElementById("date-error");
+let package = document.getElementById("package_name");
+let price = document.getElementById("price");
+let btn = document.getElementById("btn");
 
+function calculate() {
+    var start = new Date(startDate.value);
+    var end = new Date(endDate.value);
 
+    var diffYears = end.getFullYear() - start.getFullYear();
+    var diffMonths = end.getMonth() - start.getMonth();
 
-// alert(startDate)
-btn.addEventListener('click', function(){
-    let start_date = new Date(startDate.value) 
-    let end_date = new Date(endDate.value)
-    let s_year = start_date.getFullYear() * 12
-    let s_month = start_date.getMonth() + 1
-    let e_year = end_date.getFullYear() * 12
-    let e_month = end_date.getMonth() + 1
-     let duration = s_year - e_month
-    // console.log(startDate.getFullYear);
-    // alert('i have been clicked')
-    console.log(s_year);
-    console.log(e_year);
-    console.log((e_year + e_month)-(s_year + s_month));
-})
+    var totalMonths = diffYears * 12 + diffMonths;
+
+    if (totalMonths > 0) {
+        duration.value = totalMonths;
+        dateError.innerHTML = "";
+        switch (package.value) {
+            case "GOLD":
+                price.value = 30 * totalMonths;
+                break;
+            case "SILVER":
+                price.value = 25 * totalMonths;
+                break;
+            case "PLATINUM":
+                price.value = price * totalMonths;
+                break;
+            default:
+                break;
+        }
+    } else {
+        dateError.innerHTML = "Please Enter Valid Date";
+        dateError.style.color = "red";
+        duration.value = "";
+    }
+}
+endDate.addEventListener("input", calculate);
+package.addEventListener("change", function () {
+    console.log(package.value);
+});

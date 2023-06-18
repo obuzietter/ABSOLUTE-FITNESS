@@ -1,32 +1,83 @@
+:root {
+    --black: #1b2223;
+    --dark: #3a4f50;
+    --green: #0ef6cc;
+    --light: #f4f4fd;
+  }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
-body{
-    background: #FFF;
-}
- main .membership-cards{
-    width: 100vw;
-    height: 100vh;
-    border: 2px solid black;
-    background-image: url('/images/membership_no_bg.png');
- }
- main .membership-cards .card{
-    width: 100%;
-    display: flex;
- }
- main .membership-cards .card .image{
-    width: 100%;
-    border: 2px solid black;
-}
-main .membership-cards .card .image img{
-    width: 50%;
-    border: 2px solid black;
-}
-/* main .membership-cards .card .other{
 
-} */
+main .membership-cards{
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 35px 0px;
+    flex-wrap: wrap;
+    row-gap: 35px;
+}
+
+main .membership-cards .card{
+    
+    width: 300px;
+    /* border: 1px solid red; */
+}
+
+main .membership-cards .card .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0px;
+    background-color: var(--dark);
+    box-shadow: 15px 15px 15px var(--black);
+    color: var(--light);
+}
+
+main .membership-cards .card .info h3{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin: 5px;
+}
+main .membership-cards .card .info span{
+    font-size: 2.6rem;
+    margin: 5px;
+    
+}
+main .membership-cards .card .info p{
+    margin: 5px;
+    
+}
+main .membership-cards .card .info button{
+    background-color: var(--green);
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+    border: none;
+    cursor: pointer;
+    transition: .2s linear;
+
+}
+main .membership-cards .card .info button:hover{
+    box-shadow: 5px 5px 15px var(--green);
+}
+main .membership-cards .card .info button a{
+    text-decoration: none;
+    color: var(--light);
+    font-weight: 600;
+    font-size: 1.1rem;
+    
+    
+}
+main .membership-cards .card .info h4{
+    font-size: 1.2rem;
+    margin: 5px;
+}
 
 .form form{
     border: 2px solid black;
