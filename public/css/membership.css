@@ -13,7 +13,7 @@
 
 main .membership-cards{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -23,9 +23,7 @@ main .membership-cards{
 }
 
 main .membership-cards .card{
-    
     width: 300px;
-    /* border: 1px solid red; */
 }
 
 main .membership-cards .card .info{
@@ -79,17 +77,32 @@ main .membership-cards .card .info h4{
     margin: 5px;
 }
 
+main .form{
+    /* position: absolute;
+    top: 0; */
+    background-color: var(--light);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form form{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 20px;
+    width: 40%;
+    box-shadow: 15px 15px 55px var(--black);
 }
 
 input, select{
     margin: 5px;
     padding: 10px;
-    width: 30%;
+    width: 70%;
     font-size: 18px;
 }
+

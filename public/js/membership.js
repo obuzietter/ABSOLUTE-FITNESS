@@ -4,6 +4,7 @@ let duration = document.getElementById("duration");
 let dateError = document.getElementById("date-error");
 let package = document.getElementById("package_name");
 let price = document.getElementById("price");
+let priceError = document.getElementById("price-error");
 let btn = document.getElementById("btn");
 
 function calculate() {
@@ -26,9 +27,10 @@ function calculate() {
                 price.value = 25 * totalMonths;
                 break;
             case "PLATINUM":
-                price.value = price * totalMonths;
+                price.value = 40 * totalMonths;
                 break;
             default:
+              
                 break;
         }
     } else {
@@ -38,6 +40,5 @@ function calculate() {
     }
 }
 endDate.addEventListener("input", calculate);
-package.addEventListener("change", function () {
-    console.log(package.value);
-});
+package.addEventListener("input", calculate);
+

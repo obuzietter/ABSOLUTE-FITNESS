@@ -83,7 +83,7 @@
                 </div>
             </div>
         </section>
-
+        <br><br><br><br><br><br><br><br><br>
         <section class="form">
             <form action="{{'post-membership'}}" method="POST">
                 @csrf
@@ -102,21 +102,22 @@
                 <input type="date" name="start_date" id="start_date">
                 <label for="end_date">End Date</label>
                 <input type="date" name="end_date" id="end_date">
-                <label for="duration">Duration</label>
+                <label for="duration">Duration (Months)</label>
                 <span id="date-error"></span>
-                <input type="number" name="duration" id="duration" disabled>
+                <input type="number" name="duration" id="duration" readonly>
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price">
+                <span id="price-error"></span>
+                <input type="number" name="price" id="price" readonly>
                 <label for="phone">Phone number</label>
                 <input type="tel" name="phone" id="phone">
                 <input type="text" name="status" id="status" value="ACTIVE" hidden>
-                <button type="submit">SUBMIT</button>
+                <button type="submit">SIGN UP</button>
                 
             </form>
             
         </section>
 
-        <button id="btn">CALCULATE</button>
+        {{-- <button id="btn">CALCULATE</button> --}}
     </main>
     <script src="{{'/js/membership.js'}}"></script>
 </body>
