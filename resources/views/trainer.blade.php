@@ -59,6 +59,7 @@
                             <a href=""><img src="{{ url('/images/icons/facebook.png') }}" alt=""></a>
                             <a href=""><img src="{{ url('/images/icons/instagram.png') }}" alt=""></a>
                         </p>
+                        
                     </div>
                 </div>
             @endforeach

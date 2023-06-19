@@ -85,7 +85,7 @@
         </section>
         <br><br><br><br><br><br><br><br><br>
         <section class="form">
-            <form action="{{'post-membership'}}" method="POST">
+            <form action="{{'/pay'}}" method="GET">
                 @csrf
                 <input type="text" name="user_id" id="" value="{{$user->user_id}}" hidden>
                 <input type="text" name="first_name" id="" value="{{$user->first_name}}" hidden>

@@ -4,6 +4,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\GymClassController;
 use App\Http\Controllers\MembershipController;
 use App\Http\Controllers\NavController;
+use App\Http\Controllers\PayController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\TrainerController;
 use Illuminate\Support\Facades\Route;
@@ -54,5 +55,5 @@ Route::post('post-membership', [MembershipController::class, 'postMembership'])-
 //test route
 Route::post('testpost', [TestController::class, 'display'])->name('go');
 
-
-
+//route for mpesa payment
+Route::get('pay', [PayController::class, 'stk']);
