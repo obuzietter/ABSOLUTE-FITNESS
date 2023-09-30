@@ -61,7 +61,7 @@
             </div>
             <div class="description">
                 <h3>Get Your Membership Today</h3>
-                <p>Welcome to our Membership Page at XYZ Gym! We are thrilled to have you here and eager to assist you
+                <p>Welcome to our Membership Page at Fitzone Gym! We are thrilled to have you here and eager to assist you
                     in exploring our exclusive membership options. At XYZ Gym, we prioritize providing outstanding
                     customer service to ensure that your membership experience is seamless and enjoyable. Whether you
                     have inquiries regarding our diverse membership plans, pricing details, special offers, or any other
